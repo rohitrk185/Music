@@ -1,0 +1,209 @@
+body {
+	background-color: #101010;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	transition: background-color 1s;
+}
+
+.player {
+	background-color: #b3f0ff;
+    border: 0.40rem solid #000; 
+	border-radius: 0.8rem; 
+	box-shadow: 0px -1.5px 20px 5px #b3f0ff; 
+	margin-top: 1%;
+	height: 95vh;
+	width: 50vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.details {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 0.5rem;
+}
+.track-name, .track-artist {
+	position: relative;
+	animation: myanimleft 9s linear infinite;
+} 
+
+@keyframes myanimleft {
+	from {transform: translateX(-250%)}
+	to {transform: translateX(250%)}
+}
+
+.track-name:hover, .track-artist:hover {
+	animation-play-state: paused
+}
+.now-playing {
+	margin-top: 0rem;
+}
+
+.track-art {
+	margin: 0.8rem;
+	height: 30vh;
+	width: 40vw;
+	border-radius: 10%; 
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	/*background-image: url(Images/CameAndSaw.jpg); */
+}
+
+
+/* changing font sizes */
+.now-playing {
+	font-size: 1rem;
+}
+
+.track-name {
+	font-size: 1.8rem;
+}
+
+.track-artist {
+	font-size: 1.2rem;
+}
+
+@media (max-width: 550px) {
+	.size-sm {
+		height: 30vh;
+		width: 80vw;
+	}
+}
+@media (min-width: 551px) and (max-width: 969px) {
+	.size-md {
+		height: 35vh;
+		width: 30vw;
+	}
+}
+
+@media (min-width: 970px) {
+	.size-lg {
+		height: 35vh;
+		width: 20vw;
+	}
+}
+
+/* using flex with row direction to align items 
+   in horizontal direction */
+.buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px;
+}
+
+.playpause-track, .prev-track, .next-track {
+	padding: 0.5rem;
+	opacity: 0.8;
+	transition: opacity .5s;
+}
+
+.playpause-track:hover, .prev-track:hover, 
+.next-track:hover {
+	opacity: 1.0;
+	box-shadow: 0px 0px 25px #000000;
+	font-size: 90%;
+	transition: font-size box-shadow .15s;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #fff;
+	font-size: 15px;
+}
+
+/* define slider width */
+.slider_container {
+	width: 100vw;
+	max-width: 1500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 3%;
+}
+
+/* modify volume slider */ 
+.seek_slider, .volume_slider {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 5px;
+	background-color: #000000;
+	opacity: 0.7;
+	-webkit-transition: .5s;
+	transition: opacity .3s;
+}
+
+/* modif slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	margin-bottom: 1px;
+	background-color: #00FFFF;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+/* opacity when mouse is hovered */ 
+.seek_slider:hover, .volume_slider:hover{
+	opacity: 0.9;
+	transition: opacity 0.4s;
+	box-shadow: 0px 0px 10px 5px #fff;
+}
+
+.seek_slider {
+	width: 32%;
+}
+
+.volume_slider {
+	width: 12.5rem;
+}
+
+.current-time, .total-duration, i.fa-volume-down, i.fa-volume-up {
+	padding: 10px;
+}
+
+/* cursor to pointer when hovered */
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+  cursor: pointer;
+}
+
+fa-volume-down:hover, fa-volume-up:hover {
+	opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
